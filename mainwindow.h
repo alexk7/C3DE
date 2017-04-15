@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <memory>
 
 namespace Ui {
 class MainWindow;
@@ -19,7 +20,7 @@ private slots:
 	void on_actionRun_triggered();
 	
 private:
-	Ui::MainWindow *ui;
+	std::unique_ptr<Ui::MainWindow> ui;
 };
 
 #endif // MAINWINDOW_H
